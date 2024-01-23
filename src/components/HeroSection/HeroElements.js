@@ -54,7 +54,7 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroH1 = styled.h1`
-    color: #000;
+    color: #fff;
     font-size: 48px;
     text-align : center;
 
@@ -67,9 +67,24 @@ export const HeroH1 = styled.h1`
     }
 `;
 
+export const HeroH4 = styled.h4`
+    color: #fff;
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+
+    @media screen and (max-width: 768px){
+        font-size: 28px;
+    }
+
+    @media screen and (max-width: 480px){
+        font-size: 12px;
+    }
+`
+
 export const HeroP = styled.p`
-    martin-top: 24px;
-    color: #000;
+    margin-top: 24px;
+    color: #fff;
     font-size: 24px;
     text-align: center;
     max-width:680px;

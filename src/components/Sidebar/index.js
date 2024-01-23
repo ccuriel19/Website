@@ -18,25 +18,28 @@ const Sidebar = ({isOpen, toggle}) => {
         </Icon>
         <SidebarWrapper>
             <SidebarMenu>
-                <SidebarLink to="about" onClick={toggle}>
-                    About
+                <SidebarLink to="education" onClick={toggle}>
+                    Education
                 </SidebarLink>
-                <SidebarLink to="discover" onClick={toggle}>
-                    Discover
+                <SidebarLink to="experience" onClick={toggle}>
+                    Experience
                 </SidebarLink>
-                <SidebarLink to="services" onClick={toggle}>
-                    Services
+                <SidebarLink to="certs" onClick={toggle}>
+                    Certifications/Projects
                 </SidebarLink>
-                <SidebarLink to="signup" onClick={toggle}>
-                    Sign Up
+                <SidebarLink to="skills" onClick={toggle}>
+                    Skills
                 </SidebarLink>
+                
             </SidebarMenu>
-            <SideBtnWrap>
-                <SidebarRoute to="/signin" onClick={toggle}>Sign In</SidebarRoute>
-            </SideBtnWrap>
         </SidebarWrapper>
     </SidebarContainer>
   )
 }
 
 export default Sidebar
+/*
+<SideBtnWrap>
+    <SidebarRoute to="/signin" onClick={toggle}>Sign In</SidebarRoute>
+</SideBtnWrap>
+*/

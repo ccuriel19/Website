@@ -1,44 +1,31 @@
 import React from 'react'
-import { Button } from '../ButtonElement';
 import { 
     Column2, 
     Img, 
     ImgWrap, 
     InfoContainer,
     InfoWrapper, 
+    InfoTitle,
     Column1, 
     InfoRow, 
     TextWrapper, 
     TopLine, 
     Heading,
-    Subtitle, 
-    BtnWrap } from './InfoElements'
+    Subtitle } from './InfoElements'
 
-const InfoSection  = ({lightBg, id, imgStart, topLine, lightText, headline,
-darkText, description, buttonLabel, img, alt, primary, dark, dark2}) => {
+const InfoSection  = ({lightBg, id, imgStart, topLine, lightText, headline, infoTitle,
+darkText, description, img, alt}) => {
   return (
     <> 
         <InfoContainer lightBg={lightBg} id={id}>
+        <InfoTitle lightText={lightText}>{infoTitle}</InfoTitle> 
             <InfoWrapper>
-                <InfoRow imgStart={imgStart}>
+                <InfoRow imgStart={imgStart}> 
                     <Column1>
                     <TextWrapper>
-                        <TopLine>{topLine}</TopLine>
+                        <TopLine lightText={lightText}>{topLine}</TopLine>
                         <Heading lightText={lightText}>{headline}</Heading>
                         <Subtitle darkText={darkText}>{description}</Subtitle>
-                        <BtnWrap>
-                            <Button to='home' 
-                            smooth={true}
-                            duration={500}
-                            spy={true}
-                            exact={true}
-                            offset={-80}
-                            primary={primary ? 1 : 0}
-                            dark={dark ? 1 : 0}
-                            dark2={dark2 ? 1 : 0}>
-                                {buttonLabel}
-                            </Button>
-                        </BtnWrap>
                     </TextWrapper>
                     </Column1>
                     <Column2>

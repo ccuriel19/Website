@@ -4,7 +4,7 @@ import { Link as LinkScroll} from 'react-scroll';
 
 
 export const Nav = styled.nav`
-    background: #000;
+    background: ${({scrollNav}) => (scrollNav ? '#000' : 'transparent')};
     height: 80px;
     margin-top: -80px;
     display: flex;
@@ -26,9 +26,9 @@ export const NavbarContainer = styled.div`
     justify-content: space-between;
     height: 80px;
     z-index: 1;
-    width:100%;
+    width: 100%;
     padding: 0 24px;
-    max-width:1100px;
+    max-width: 1100px;
 `;
 
 export const NavLogo = styled(LinkRouter)`
@@ -38,7 +38,8 @@ export const NavLogo = styled(LinkRouter)`
     font-size: 1.5rem;
     display: flex;
     align-items: center;
-    margin-left: 24px;
+    margin-left: 20px;
+    margin-right: 50px;
     font-weight: bold;
     text-decoration: none;
 `;
@@ -58,33 +59,32 @@ export const MobileIcon = styled.div`
 `;
 
 export const NavMenu = styled.ul`
-     display: flex;
-     align-items: center;
-     list-style: none;
-     text-align: center;
-     margin-right: -22px;
-
-     @media screen and (max-width: 768px){
-         display: none;
-     }
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    margin-right: 20px;
+    @media screen and (max-width: 768px){
+        display: none;
+    }
 `;
 
 export const NavItem = styled.li`
-     height: 80px;   
+    height: 80px;   
 `;
 
 export const NavLinks = styled(LinkScroll)`
-     color: #fff;
-     display: flex;
-     align-items: center;
-     text-decoration: none;
-     padding: 0 1rem;
-     height: 100%;
-     cursor: pointer;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
 
-     &.active{
-         border-bottom: 3px solid #01bf71;
-     }
+    &.active{
+        border-bottom: 3px solid #19BED9;
+    }
 `;
 
 export const NavBtn = styled.nav`
@@ -98,7 +98,7 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(LinkRouter)`
      border-radius: 50px;
-     background: #01bf71;
+     background: #19BED9;
      white-space: nowrap;
      padding: 10px 22px;
      color: #010606;

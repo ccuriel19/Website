@@ -1,16 +1,18 @@
 import React, {useState} from 'react';
-import Video from '../../videos/video.mp4';
+import Video from '../../videos/calm.mp4';
 import { Button } from '../ButtonElement';
 import { 
   HeroContainer, 
   HeroBckgrnd, 
   VideoBckgrnd,
-  HeroBtnWrapper,
+  HeroBtnWrapper, //for button that was removed
   HeroContent, 
-  HeroH1, 
+  HeroH1,
+  HeroH4, 
   HeroP,
-  ArrowForward, 
-  ArrowRight } from './HeroElements';
+  ArrowForward, //for button that was removed
+  ArrowRight //for button that was removed
+} from './HeroElements';
   
 
 const HeroSection = () => {
@@ -26,21 +28,36 @@ const HeroSection = () => {
             <VideoBckgrnd autoPlay loop muted src={Video} type='video/mp4'/>
         </HeroBckgrnd>
         <HeroContent>
-          <HeroH1>Family Powerwashing Business</HeroH1>
-          <HeroP>Sign up for a new account 
-            today and receive $250 in credit 
-            towards your next payment.
+          <HeroH1>Citlalli Curiel</HeroH1>
+          <HeroH4>
+            Oak Point, TX
+          </HeroH4>
+          <HeroH4>
+            (940) 597 - 2567
+          </HeroH4>
+          <HeroH4>
+            citlallicuriel19@gmail.com
+          </HeroH4>
+          <HeroP>
+          Software Tester effective at working in fast-paced testing environments to
+          review software at each stage of development and production. Checks
+          function, layout and operation for usability and visual design issues.
           </HeroP>
-          <HeroBtnWrapper>
-            <Button to="signup" 
-            onMouseEnter={onHover} 
-            onMouseLeave={onHover}>
-              Get started {hover ? <ArrowForward/> : <ArrowRight/>}
-            </Button>
-          </HeroBtnWrapper>
         </HeroContent>
     </HeroContainer>
   )
 }
 
 export default HeroSection
+
+/*Not needed but important:
+<HeroBtnWrapper>
+  <Button to="signup" 
+  onMouseEnter={onHover} 
+  onMouseLeave={onHover}
+  primary="true"
+  dark="true">
+    Get started {hover ? <ArrowForward/> : <ArrowRight/>}
+  </Button>
+</HeroBtnWrapper>
+*/
